@@ -1,0 +1,58 @@
+<section  id="service-detail-container" class="container">
+  <div  id="title">
+    <h2 >Nuevo Producto</h2>
+  </div>
+
+  <hr>
+<!-- 
+  <div class="offset-lg-10 offset-sm-6">
+    <button style="color: white;"  mat-raised-button color="primary">GUARDAR</button>
+  </div> -->
+  <div class="row">
+
+    <div class="col-12">
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+         <div class="">
+    <div class="row">
+      <div class="col-lg-6">
+        <div id="left-inputs">       
+          <mat-form-field appearance="standard" class="unset">
+              <mat-label>Imagen</mat-label>
+              <input  [(ngModel)] = "product.image" matInput placeholder="Imagen">
+          </mat-form-field>         
+          <mat-form-field appearance="standard" class="unset">
+              <mat-label>Descripción</mat-label>
+              <input  [(ngModel)] = "product.description" matInput placeholder="Descripción">
+          </mat-form-field>         
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div id="right-inputs">
+            <mat-form-field appearance="standard" class="unset">
+              <mat-label>Precio</mat-label>
+              <input  [(ngModel)] = "product.price" matInput placeholder="Precio">               
+            </mat-form-field>
+            <mat-form-field appearance="standard" class="mat-for-field">
+              <mat-label>Categoria</mat-label>
+              <input [(ngModel)] = "product.categoryId" matInput placeholder="Categoria">
+          </mat-form-field>
+       
+            
+        </div>
+      </div>
+    </div>
+  </div>
+        
+    </mat-card-content>
+  </mat-card>
+
+
+</div>
+</div>
+
+<button style="position: absolute; top: 85%; left: 90%" (click)="saveProduct($event)" mat-fab ><mat-icon>save</mat-icon></button>

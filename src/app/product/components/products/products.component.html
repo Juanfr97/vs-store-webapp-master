@@ -1,0 +1,22 @@
+<mat-card class="mt-4 header">
+  <div class="row">
+          <div class="col-12 ml-3">
+              <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button (change)="onKeyUp()" value="1" [checked]="true">Comida mexicana
+                  </mat-radio-button>
+                  <mat-radio-button (change)="onKeyUp()" value="2">Postres</mat-radio-button>
+                  <mat-radio-button (change)="onKeyUp()" value="3">Comida rapida</mat-radio-button>
+                  <mat-radio-button (change)="onKeyUp()" value="4">Comida italiana</mat-radio-button>
+              </mat-radio-group>
+          </div>
+   </div>
+
+</mat-card>
+<div class="product-grid">
+
+  <app-product
+    *ngFor="let product of products"
+    (productClicked)="clickProduct($event)"
+    [product]="product">
+  </app-product>
+</div>

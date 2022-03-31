@@ -1,0 +1,95 @@
+<mat-toolbar color="primary" class="tool">
+    <mat-toolbar-row>
+  
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  
+  <section id="register-container">
+    <div class="card-container">
+        <div class="container">
+            <div class="row justify-content-lg-center">
+                <div class="col-lg-6 mt-3">
+                    
+                </div>
+            </div>
+            <div class="row justify-content-lg-center">
+                <div class="col-lg-6">
+                  <form [formGroup]="form" (ngSubmit)="register($event)">
+                    <mat-card>
+                      <mat-card-header>
+                        <mat-card-title>{{user.name}} {{user.lastName}}</mat-card-title>
+                      </mat-card-header>
+                      <mat-card-content>
+                        <div class="row">
+                          <div class="col-xs">
+                            <mat-form-field>
+                              <input [(ngModel)] = "user.name" placeholder="Nombre" formControlName="name" matInput type="text">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs">
+                            <mat-form-field>
+                              <input [(ngModel)] = "user.lastName" placeholder="Apellido" formControlName="lastName" matInput type="text">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs">
+                            <mat-form-field>
+                              <input [(ngModel)]="user.email" placeholder="Correo electrónico" formControlName="email" matInput type="email">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs">
+                            <mat-form-field>
+                              <input [(ngModel)]="user.zipCode" placeholder="Codigo Postal" formControlName="zipCode" matInput type="text">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs">
+                            <mat-form-field>
+                              <input [(ngModel)]="user.street" placeholder="Calle" formControlName="street" matInput type="text">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs">
+                            <mat-form-field>
+                              <input [(ngModel)]="user.city" placeholder="Ciudad" formControlName="city" matInput type="text">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs">
+                            <mat-form-field>
+                              <input placeholder="Contraseña" formControlName="password" matInput type="password">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs">
+                            <mat-form-field>
+                              <input placeholder="Confirmar contraseña" formControlName="confirmPassword" matInput type="password">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        
+                        
+                      </mat-card-content>
+                      <mat-card-actions>
+                        <button [disabled]="form.invalid" mat-raised-button type="submit">Registro</button>
+                      </mat-card-actions>
+                    </mat-card>
+                    
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  

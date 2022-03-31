@@ -1,0 +1,30 @@
+<div *ngIf="product">
+  <div style="text-align: center;">
+    <!-- <img [src]="product.image" alt=""> -->
+    <img [src]="product.image" alt="">
+  </div>
+  <div style="text-align: center;">
+    
+    <p style="color: #3f51b5;">Nombre: {{ product.description }}</p>
+      <p style="color: #3f51b5;">Precio:  <button mat-raised-button color="accent">{{ product.price | currency }}</button></p>
+    <button (click)="addCart()" mat-stroked-button color="primary">Agregar al carrito</button>
+  </div>
+
+  <div class="row" style="text-align: center; justify-content: space-evenly;">
+    <div class="col">
+      <mat-icon style="color: #3f51b5;">card_giftcard</mat-icon> 
+      <p style="color: #3f51b5;">Listo</p>
+    </div>
+    <div class="col">
+      <mat-icon style="color: #3f51b5;">sell</mat-icon>
+      <p style="color: #3f51b5;">Original</p>
+    </div>
+    <div class="col">
+      <mat-icon style="color: #3f51b5;">price_check</mat-icon>
+      <p style="color: #3f51b5;">Garantia</p>
+    </div>
+    
+    
+  </div>
+</div>
+

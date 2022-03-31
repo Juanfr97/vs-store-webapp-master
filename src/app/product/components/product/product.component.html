@@ -1,0 +1,23 @@
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ product.description | uppercase }}</mat-card-title>
+      <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="crop-image">
+      <img *ngIf="product.image !==''" [src]="product.image" alt="">
+      <img *ngIf="product.image===''" src="../../../../assets/images/boots.png" alt="">
+    </div>
+
+    <mat-card-actions style="margin-left: 86px;">
+      <a mat-flat-button color="primary" [routerLink]="['/products', product.id]">Ver detalle</a>
+      <button (click)="addCart()" mat-stroked-button color="primary">Agregar al carrito</button>
+    </mat-card-actions>
+  </mat-card>
+
+<!-- <h3 appHighlight>{{ product.title | uppercase }}
+<img [src]="product.image" alt="">
+<strong>{{ product.price | currency }}</strong>
+<p>{{ product.description | slice:0:10 }}</p>
+<p>{{ today | date:'HH:mm' }}</p> -->
+

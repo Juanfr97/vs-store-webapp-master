@@ -1,0 +1,13 @@
+nav > a {
+  padding: 5px;
+  text-decoration: none;
+}
+nav > a.active {
+  transform: scale(1.1,1.1)
+}
+.header-row{
+  width: 100%;
+}
+.header-toolbar {
+  margin-bottom: 20px;
+}
